@@ -1,17 +1,16 @@
-name: Branch name
+name: Branch Name
 
 on:
   push:
     branches:
-        - "*"
-      
+      - '*'  # This will trigger the workflow on any branch push
 
 jobs:
-    branch-name:
-        runs-on: ubunto-latest
-        steps:
-            - name: check out
-              uses: github/checkout@v2
-            - name: print branch
-              run: echo "${{github.ref_name }}"
-    
+  branch-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Print branch name
+        run: echo "The branch name is ${{ github.ref_name }}"
