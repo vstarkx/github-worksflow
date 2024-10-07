@@ -1,0 +1,17 @@
+name: Branch name
+
+on:
+  push:
+    branches:
+        - "*"
+      
+
+jobs:
+    branch-name:
+        runs-on: ubunto-latest
+        steps:
+            - name: check out
+              uses: github/checkout@v2
+            - name: print branch
+              run: echo "${{github.ref_name }}"
+    

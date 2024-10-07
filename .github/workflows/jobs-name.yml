@@ -1,0 +1,15 @@
+name: jobs name
+
+on:
+    push:
+        branches:
+            - "*"
+jobs:
+    jobs-name:
+        runs-on: ubuntu-latest
+        steps:
+            - name: job 1
+              run: echo "job 1"
+            - name: job 2
+              run: echo "job 2"
+            
