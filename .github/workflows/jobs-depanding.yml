@@ -20,5 +20,5 @@ jobs:
         needs: job-1
         steps:
             - name: print name
-              run: NAME=${{needs.job-1.outputs.name}}
+              run: echo "NAME=${{needs.job-1.outputs.name}}"
 

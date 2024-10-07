@@ -5,11 +5,14 @@ on:
         branches:
             - "*"
 jobs:
-    jobs-name:
+    build:
         runs-on: ubuntu-latest
         steps:
-            - name: job 1
-              run: echo "job 1"
-            - name: job 2
-              run: echo "job 2"
+            - name: Print Job Name
+              run: echo "The job name is ${{ github.job }}" 
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Print Job Name
+              run: echo "The job name 2 is ${{ github.job }}" 
             
