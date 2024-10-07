@@ -1,9 +1,9 @@
 name: job depanding
 
 on:
-    push:
-        branches:
-            - "*"
+   push:
+     branches:
+        - "*"
 
 jobs:
     job-1:
